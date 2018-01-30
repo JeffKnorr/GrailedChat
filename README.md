@@ -7,6 +7,8 @@ Creates a very basic RESTful chat server instance.
 - Add more documentation
 - Enhance functionality: Add message threads, other REST Methods, Modify for WSGi server use, Switch to PostgreSQL database backend, rewrite using a framework such as Flask to minimize code, Sterilize data input
 - Performance improvements: Optimizing Queries/Indexes, Logic improvements
+- Move Database and server configuration to a config file or command line arguments
+- Generate requirements.txt
 
 ## Features:
 - Versioning/Ease of adding new backend/Rest Methods
@@ -15,6 +17,13 @@ Creates a very basic RESTful chat server instance.
 - Minimal depencies
 
 ## Example Usage:
+Requirements: Python 3.6 with SQLAlchemy (pip install sqlalchemy)
+To Launch/Start the server: 
+`python.exe chatServer.py`
+
+To Quit:
+`CTRL-C`
+
 ### POST http://127.0.0.1:8080/chat/v1/inbox/
 JSON Body:
 ```
