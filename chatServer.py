@@ -47,9 +47,7 @@ def msgs_to_json(msgs):
 def get_messages(handler):
     path = urllib.parse.unquote(handler.path)
     path = path.split('/')
-    print(path)    
     inbox = str(path[4])
-    print(inbox)
     msgs = session.query(message).filter((message.toUser==inbox) | (message.fromUser==inbox)).order_by(message.timestamp)
     return msgs_to_json(msgs)
 
